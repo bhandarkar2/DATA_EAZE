@@ -1,0 +1,41 @@
+ pre-prerequisite ---> Disable secure BIOS
+
+/ Take update only if version is 18.04.3 /
+sudo apt update 
+
+/ Check  version of gcc /
+gcc --version 
+
+/ if version is below 7  do following steps to update gcc /
+
+sudo apt install build-essential && sudo apt-get install manpages-dev
+
+sudo apt install software-properties-common
+
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+
+sudo apt install gcc-9 g++-9
+
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90 --slave /usr/bin/g++ g++ /usr/bin/g++-9 --slave /usr/bin/gcov gcov /usr/bin/gcov-9
+
+
+/optional step /
+sudo update-alternatives --config gcc
+
+/ take clone of this /
+git clone https://github.com/lwfinger/rtlwifi_new.git
+
+/ checkout to this branch / 
+cd rtlwifi_new/ && git checkout origin/extended -b extended
+
+/ run make /
+sudo make install
+
+/ install drivers / 
+sudo modprobe -r rtl8723de 
+
+/ this step may give you error like not permitted make you had disabled secure BIOS 
+sudo modprobe rtl8723de
+
+/ to imporove signal /
+sudo modprobe -r rtl8723de && sleep 5 && sudo modprobe rtl8723de ant_sel=2

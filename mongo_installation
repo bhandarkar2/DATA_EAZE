@@ -1,0 +1,9 @@
+On Ubuntu use below steps for installation of  mongodb :-
+
+1. sudo apt-get install mongodb-org
+
+2. sudo systemctl start mongod
+
+3. sudo systemctl enable mongod
+
+4. mongo

@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Program<Corejava_db1df009>",
+            "request": "launch",
+            "mainClass": "Program",
+            "projectName": "Corejava_db1df009"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test<Corejava_db1df009>",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "Corejava_db1df009"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-code<Corejava_db1df009>",
+            "request": "launch",
+            "mainClass": "code",
+            "projectName": "Corejava_db1df009"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-code2<Corejava_db1df009>",
+            "request": "launch",
+            "mainClass": "code2",
+            "projectName": "Corejava_db1df009"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-code3<Corejava_db1df009>",
+            "request": "launch",
+            "mainClass": "code3",
+            "projectName": "Corejava_db1df009"
+        }
+    ]
+}

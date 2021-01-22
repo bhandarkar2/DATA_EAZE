@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Eclipse java
+Comment=Eclipse IDE
+Exec=env UBUNTU_MENUPROXY=0 SWT_GTK3=0 /home/sunbeam/subuntu2020/Eclipse/JAVA/spring-tool-suite-Feb2020/sts-bundle/sts-3.9.11.RELEASE/STS
+Icon=/home/sunbeam/subuntu2020/Eclipse/JAVA/spring-tool-suite-Feb2020/sts-bundle/sts-3.9.11.RELEASE/icon.xpm
+Terminal=false
+Type=Application
+Categories=IDE;Application
+
