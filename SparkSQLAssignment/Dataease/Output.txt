@@ -1,0 +1,152 @@
+1) How many startups are there in Pune City?
+
+root
+ |-- City: string (nullable = true)
+ |-- count: long (nullable = false)
+
++----+-----+
+|City|count|
++----+-----+
+|Pune|   78|
++----+-----+
+
+
+2) How many startups in Pune got their Seed/ Angel Funding?
+
+root
+ |-- Sr_No: integer (nullable = true)
+ |-- Date: string (nullable = true)
+ |-- Startup_Name: string (nullable = true)
+ |-- Industry_Vertical: string (nullable = true)
+ |-- SubVertical: string (nullable = true)
+ |-- City: string (nullable = true)
+ |-- Investors_Name: string (nullable = true)
+ |-- InvestmentnType: string (nullable = true)
+ |-- Amount_in_USD: string (nullable = true)
+ |-- Remarks: string (nullable = true)
+
++-------------------+-----+
+|    InvestmentnType|count|
++-------------------+-----+
+|Seed/ Angel Funding|    2|
++-------------------+-----+
+
+
+3) What is the total amount raised by startups in Pune City? Hint - use regex_replace to
+get rid of null
+
+root
+ |-- City: string (nullable = true)
+ |-- sum(CAST(Amount_in_USD AS INT)): long (nullable = true)
+
++---------+-------------------------------+
+|     City|sum(CAST(Amount_in_USD AS INT))|
++---------+-------------------------------+
+|Bengaluru|                     2577333755|
+|  Gurgaon|                     1910481134|
+|New Delhi|                     2515001875|
+|     Pune|                      523586000|
+|    Noida|                     1211796000|
++---------+-------------------------------+
+
+4) Find the top Investor(by amount) of each year.
+
+root
+ |-- Investors_Name: string (nullable = true)
+ |-- date: long (nullable = true)
+ |-- amount: long (nullable = true)
+
++--------------------+----+----------+
+|      Investors_Name|date|    amount|
++--------------------+----+----------+
+|  Westbridge Capital|2019|3900000000|
+|            Softbank|2017|2500000000|
+|\\xc2\\xa0Tiger G...|2015|2020000000|
+|\\xc2\\xa0IndianI...|2015|2019350000|
+|\xc2\xa0IvyCap Ve...|2015|2016200000|
+|\\xc2\\xa0Goldman...|2015|2010000000|
+|Qiming Venture Pa...|2019|1510950000|
+|Microsoft, eBay, ...|2017|1400000000|
+|      SoftBank Group|2017|1400000000|
+|Vijay Shekhar Sharma|2019|1000000000|
+|Steadview Capital...|2015| 700000000|
+|Alibaba Group, An...|2015| 680000000|
+|                 N/A|2018| 600000000|
+|Altimeter Capital...|2019| 585000000|
+|Baillie Gifford, ...|2015| 500000000|
+|Alibaba, Foxconn,...|2015| 500000000|
+|Goldman Sachs, Ac...|2019| 488997554|
+|Bennett Coleman a...|2019| 450000000|
+|DST Global, Stead...|2015| 400000000|
+|SoftBank Vision Fund|2018| 300000000|
++--------------------+----+----------+
+
+5) What are the top 5 Industry_Vertical which has the highest number of startups in India?
+
+root
+ |-- Sr_No: integer (nullable = true)
+ |-- Date: string (nullable = true)
+ |-- Startup_Name: string (nullable = true)
+ |-- Industry_Vertical: string (nullable = true)
+ |-- SubVertical: string (nullable = true)
+ |-- City: string (nullable = true)
+ |-- Investors_Name: string (nullable = true)
+ |-- InvestmentnType: string (nullable = true)
+ |-- Amount_in_USD: string (nullable = true)
+ |-- Remarks: string (nullable = true)
+
++-----------------+---+
+|Industry_Vertical|cnt|
++-----------------+---+
+|Technology       |478|
+|eCommerce        |186|
+|Healthcare       |70 |
+|Finance          |62 |
+|ECommerce        |61 |
++-----------------+---+
+
+
+6) Find the top startup(by amount raised) from each city?
+
+root
+ |-- Sr_No: integer (nullable = true)
+ |-- Date: string (nullable = true)
+ |-- Startup_Name: string (nullable = true)
+ |-- Industry_Vertical: string (nullable = true)
+ |-- SubVertical: string (nullable = true)
+ |-- City: string (nullable = true)
+ |-- Investors_Name: string (nullable = true)
+ |-- InvestmentnType: string (nullable = true)
+ |-- Amount_in_USD: string (nullable = true)
+ |-- Remarks: string (nullable = true)
+
+root
+ |-- City: string (nullable = true)
+ |-- total: long (nullable = true)
+
++-------------------+----------+
+|               City|     total|
++-------------------+----------+
+|          Bangalore|9568464628|
+|          Bengaluru|7987516255|
+|             Mumbai|3614645015|
+|          New Delhi|2515001875|
+|            Gurgaon|2394588713|
+|\\xc2\\xa0New Delhi|2030600020|
+|    \\xc2\\xa0Noida|2020000000|
+|   \\xc2\\xa0Mumbai|2019350000|
+|\\xc2\\xa0Bangalore|2016200000|
+|                nan|1231811368|
+|              Noida|1211796000|
+|            Chennai| 551545000|
+|               Pune| 523586000|
+|           Gurugram| 457207089|
+|         Menlo Park| 450000000|
+|         California| 300000000|
+|         Kormangala| 284000000|
+|            Nairobi| 273903468|
+|          Hyderabad| 272479230|
+|              Delhi| 272008640|
++-------------------+----------+
+
+
